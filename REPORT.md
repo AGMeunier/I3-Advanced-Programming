@@ -27,3 +27,19 @@ It would violate the clean code principles, mainly the principles for functions,
 *"Spring Boot uses HTTP message converters and Jackson to serialize Java objects into JSON automatically. The reverse mechanism  is used with @RequestBody"*
 
 Since we use a `@RequestBody` with `@RestController`, there is an implicit JSON serializer used. 
+
+## Q 3.1 - Before configuring anything, restart the application. It fails. Read the error message carefully: what is Spring Boot trying to do that it could not? What does that tell you about what a starter does?
+Spring Boot can't access the database, and therefore find an appropriate driver, because we haven't given it the URL to the database.
+
+## Q 3.2 - Stop for a moment and look at import jakarta.persistence.*;. Where does this package come from? Which dependency brought it into your project? Why jakarta and not javax, as you will see in older tutorials?
+TODO
+
+## Q 3.3 - What is the difference between your first Programmer (a POJO) and this one? Which table and which columns does Hibernate map lastName and favoriteBook to, and why does it work without any @Table or @Column(name=...)?
+TODO
+
+## Q 3.4 - This interface has no body and no implementation class, yet it offers findAll(), findById(), save(), deleteById()… Where do these methods come from? Who creates the implementation at runtime?
+These functions come from `JpaRepository`.
+
+## Q 3.5 - You will often see another style: `@Autowired private ProgrammerRepository repo;` in the code you will encounter on the field. Why do we prefer constructor injection?
+TODO
+

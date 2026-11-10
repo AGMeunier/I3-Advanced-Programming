@@ -1,15 +1,27 @@
 package st2apr.workshop.model;
 
+import jakarta.persistence.*;
+
 import java.math.BigDecimal;
 
+@Entity
 public class Programmer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
+
+    @Column(nullable = false, length = 100)
     String lastName;
+
+    @Column(nullable = false, length = 100)
     String firstName;
+
     String address;
     String expertiseLanguage;
     String favoriteBook;
     BigDecimal salary;
+
+    protected Programmer() {}
 
     public Programmer(Long id, String lastName, String firstName, String address, String expertiseLanguage, String favoriteBook, BigDecimal salary) {
         this.id = id;

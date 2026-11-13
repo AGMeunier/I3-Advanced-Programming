@@ -1,0 +1,31 @@
+### List all programmers
+GET http://localhost:8080/programmers
+
+### Create a programmer
+POST http://localhost:8080/programmers
+Content-Type: application/json
+
+{
+"lastName": "Hopper",
+"firstName": "Grace",
+"address": "1 rue du Compilateur, Paris",
+"expertiseLanguage": "COBOL",
+"favoriteBook": "The Art of Computer Programming",
+"salary": 52000.00
+}
+
+### Change a programmer
+PUT http://localhost:8080/programmers/11
+Content-Type: application/json
+
+{
+"lastName": "Slopper",
+"firstName": "Grace",
+"address": "1 rue du Compilateur, Paris",
+"expertiseLanguage": "COBOL",
+"favoriteBook": "The Art of Computer Programming",
+"salary": 52000.00
+}
+
+### Delete a programmer
+DELETE http://localhost:8080/programmers/11

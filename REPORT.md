@@ -43,3 +43,8 @@ These functions come from `JpaRepository`.
 ## Q 3.5 - You will often see another style: `@Autowired private ProgrammerRepository repo;` in the code you will encounter on the field. Why do we prefer constructor injection?
 TODO
 
+## Q 4.1 - PUT and PATCH can both “modify” a resource. What is the difference ? Which one fits this operation better? Be ready to justify your choice.
+HTTP PUT request is used to replace and update the entire resource or document, while the PATCH request only updates the specific parts of that document.
+
+## Q 4.2 - Research @Transactional. On which methods of the service layer does it make sense – and on which does it not? What happens “under the hood” when you add it? Why does it matter most for the update operation?
+"When this annotation is declared at the class level, it applies as a default to all methods of the declaring class and its subclasses."

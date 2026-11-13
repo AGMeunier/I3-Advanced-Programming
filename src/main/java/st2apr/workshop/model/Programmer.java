@@ -21,7 +21,7 @@ public class Programmer {
     String favoriteBook;
     BigDecimal salary;
 
-    protected Programmer() {}
+    public Programmer() {}
 
     public Programmer(Long id, String lastName, String firstName, String address, String expertiseLanguage, String favoriteBook, BigDecimal salary) {
         this.id = id;
